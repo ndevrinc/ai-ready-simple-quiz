@@ -866,9 +866,9 @@ body {
 
 .pillar-card:hover { border-color: var(--ndevr-red); transform: translateY(-2px); }
 
-.pillar-card.audience,
-.pillar-card.creator,
-.pillar-card.developer { border-left: none; }
+.pillar-card.audience { border-left: 4px solid var(--ndevr-red); }
+.pillar-card.creator { border-left: 4px solid var(--ndevr-red); }
+.pillar-card.developer { border-left: 4px solid var(--ndevr-red); }
 
 .pillar-icon {
   font-size: var(--font-size-4xl);

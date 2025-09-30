@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- SVG Icon Definitions -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-audience" viewBox="0 0 24 24">
+            <circle cx="8" cy="8" r="3" fill="currentColor"/>
+            <circle cx="16" cy="8" r="3" fill="currentColor"/>
+            <path d="M2 20c0-3.314 2.686-6 6-6h0c3.314 0 6 2.686 6 6H2z" fill="currentColor"/>
+            <path d="M10 20c0-2.209 1.791-4 4-4h0c2.209 0 4 1.791 4 4h-8z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-creator" viewBox="0 0 24 24">
+            <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" fill="currentColor"/>
+            <path d="M20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0L14.13 4.1l3.75 3.75 2.83-2.81z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-developer" viewBox="0 0 24 24">
+            <path d="M7.5 8L3 12.5 7.5 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.5 8L21 12.5 16.5 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 20l5-16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+    </svg>
     <!-- Welcome Screen -->
     <div id="welcome-screen" class="screen active">
         <div class="container">
@@ -23,19 +41,19 @@
                     <p class="intro-text">See how ready your organization is for AI across three key experiences that drive digital success:</p>
                     <div class="pillars-grid">
                         <div class="pillar-card audience">
-                            <div class="pillar-icon">👥</div>
+                            <div class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-audience"></use></svg></div>
                             <h3>Audience Experience</h3>
                             <p>AI-powered search, personalization, and user engagement</p>
                         </div>
                         
                         <div class="pillar-card creator">
-                            <div class="pillar-icon">✍️</div>
+                            <div class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-creator"></use></svg></div>
                             <h3>Creator Experience</h3>
                             <p>Content planning, quality assurance, and workflow automation</p>
                         </div>
                         
                         <div class="pillar-card developer">
-                            <div class="pillar-icon">🛠️</div>
+                            <div class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-developer"></use></svg></div>
                             <h3>Developer Experience</h3>
                             <p>AI development tools, automation, and deployment</p>
                         </div>
@@ -71,7 +89,7 @@
                                         <strong>Audience Experience Only</strong>
                                     </div>
                                     <div class="scope-details">
-                                        <span class="scope-pillars">👥 Focus Area</span>
+                                        <span class="scope-pillars"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-audience"></use></svg> Focus Area</span>
                                         <span class="scope-time">9 questions • 5-7 minutes</span>
                                     </div>
                                     <p class="scope-description">AI tools for user engagement and personalization</p>
@@ -85,7 +103,7 @@
                                         <strong>Creator Experience Only</strong>
                                     </div>
                                     <div class="scope-details">
-                                        <span class="scope-pillars">✍️ Focus Area</span>
+                                        <span class="scope-pillars"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-creator"></use></svg> Focus Area</span>
                                         <span class="scope-time">9 questions • 5-7 minutes</span>
                                     </div>
                                     <p class="scope-description">AI tools for content creation and workflows</p>
@@ -99,7 +117,7 @@
                                         <strong>Developer Experience Only</strong>
                                     </div>
                                     <div class="scope-details">
-                                        <span class="scope-pillars">🛠️ Focus Area</span>
+                                        <span class="scope-pillars"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-developer"></use></svg> Focus Area</span>
                                         <span class="scope-time">9 questions • 5-7 minutes</span>
                                     </div>
                                     <p class="scope-description">AI tools for development and deployment</p>
@@ -217,8 +235,8 @@
     <!-- Pillar Transition Screen -->
     <div id="transition-screen" class="screen">
         <div class="container">
-            <div class="transition-content">
-                <div class="transition-icon" id="transition-icon">✍️</div>
+                <div class="transition-content">
+                    <div class="transition-icon" id="transition-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-creator"></use></svg></div>
                 <h2 id="transition-title">Creator Experience</h2>
                 <p id="transition-description">AI tools that improve content creation, workflows, and editorial processes</p>
                 <button id="continue-btn" class="btn btn-primary btn-lg">Continue</button>
@@ -266,7 +284,7 @@
                 <div class="pillars-grid">
                     <div class="pillar-result audience" id="audience-result">
                         <div class="pillar-header">
-                            <span class="pillar-icon">👥</span>
+                            <span class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-audience"></use></svg></span>
                             <h4>Audience Experience</h4>
                         </div>
                         <div class="pillar-score-bar">
@@ -282,7 +300,7 @@
                     
                     <div class="pillar-result creator" id="creator-result">
                         <div class="pillar-header">
-                            <span class="pillar-icon">✍️</span>
+                            <span class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-creator"></use></svg></span>
                             <h4>Creator Experience</h4>
                         </div>
                         <div class="pillar-score-bar">
@@ -298,7 +316,7 @@
                     
                     <div class="pillar-result developer" id="developer-result">
                         <div class="pillar-header">
-                            <span class="pillar-icon">🛠️</span>
+                            <span class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-developer"></use></svg></span>
                             <h4>Developer Experience</h4>
                         </div>
                         <div class="pillar-score-bar">

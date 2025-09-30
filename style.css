@@ -864,11 +864,11 @@ body {
   transition: all var(--duration-normal) var(--ease-standard);
 }
 
-.pillar-card:hover { border-color: var(--ndevr-red); transform: translateY(-2px); }
+.pillar-card.audience { border-left: 2px solid var(--ndevr-gray); }
+.pillar-card.creator { border-left: 2px solid var(--ndevr-gray); }
+.pillar-card.developer { border-left: 2px solid var(--ndevr-gray); }
 
-.pillar-card.audience { border-left: 4px solid var(--ndevr-red); }
-.pillar-card.creator { border-left: 4px solid var(--ndevr-red); }
-.pillar-card.developer { border-left: 4px solid var(--ndevr-red); }
+.pillar-card:hover { border-color: var(--ndevr-red); transform: translateY(-2px); }
 
 .pillar-icon {
   font-size: var(--font-size-4xl);

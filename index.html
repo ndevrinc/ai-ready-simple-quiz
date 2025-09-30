@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Quiz - Ndevr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <div class="welcome-content">
+                <div class="logo-section">
+                    <div class="ndevr-logo">
+                        <h1>AI Readiness Quiz</h1>
+                        <div class="ndevr-brand">by <span class="brand-highlight">Ndevr</span></div>
+                    </div>
+                    <p class="subtitle">The 3E Framework</p>
+                </div>
+                
+                <div class="framework-intro">
+                    <p class="intro-text">See how ready your organization is for AI across three key experiences that drive digital success:</p>
+                    <div class="pillars-grid">
+                        <div class="pillar-card audience">
+                            <div class="pillar-icon">👥</div>
+                            <h3>Audience Experience</h3>
+                            <p>AI-powered search, personalization, and user engagement</p>
+                        </div>
+                        
+                        <div class="pillar-card creator">
+                            <div class="pillar-icon">✍️</div>
+                            <h3>Creator Experience</h3>
+                            <p>Content planning, quality assurance, and workflow automation</p>
+                        </div>
+                        
+                        <div class="pillar-card developer">
+                            <div class="pillar-icon">🛠️</div>
+                            <h3>Developer Experience</h3>
+                            <p>AI development tools, automation, and deployment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="user-info-form" class="user-form" novalidate>
+                    <h3>Choose Your Quiz</h3>
+                    
+                    <!-- Quiz Scope Selection -->
+                    <div class="assessment-scope-section">
+                        <label class="form-label section-label">Quiz Scope</label>
+                        <div class="scope-options">
+                            <div class="scope-option">
+                                <input type="radio" id="complete" name="assessmentScope" value="complete" checked>
+                                <label for="complete" class="scope-label">
+                                    <div class="scope-header">
+                                        <strong>Complete Quiz</strong>
+                                        <span class="scope-badge recommended">Recommended</span>
+                                    </div>
+                                    <div class="scope-details">
+                                        <span class="scope-pillars">All 3 Experiences</span>
+                                        <span class="scope-time" id="complete-time">27 questions • 15-20 minutes</span>
+                                    </div>
+                                    <p class="scope-description">Full check across Audience, Creator, and Developer experiences</p>
+                                </label>
+                            </div>
+                            
+                            <div class="scope-option">
+                                <input type="radio" id="audience_only" name="assessmentScope" value="audience_only">
+                                <label for="audience_only" class="scope-label">
+                                    <div class="scope-header">
+                                        <strong>Audience Experience Only</strong>
+                                    </div>
+                                    <div class="scope-details">
+                                        <span class="scope-pillars">👥 Focus Area</span>
+                                        <span class="scope-time">9 questions • 5-7 minutes</span>
+                                    </div>
+                                    <p class="scope-description">AI tools for user engagement and personalization</p>
+                                </label>
+                            </div>
+                            
+                            <div class="scope-option">
+                                <input type="radio" id="creator_only" name="assessmentScope" value="creator_only">
+                                <label for="creator_only" class="scope-label">
+                                    <div class="scope-header">
+                                        <strong>Creator Experience Only</strong>
+                                    </div>
+                                    <div class="scope-details">
+                                        <span class="scope-pillars">✍️ Focus Area</span>
+                                        <span class="scope-time">9 questions • 5-7 minutes</span>
+                                    </div>
+                                    <p class="scope-description">AI tools for content creation and workflows</p>
+                                </label>
+                            </div>
+                            
+                            <div class="scope-option">
+                                <input type="radio" id="developer_only" name="assessmentScope" value="developer_only">
+                                <label for="developer_only" class="scope-label">
+                                    <div class="scope-header">
+                                        <strong>Developer Experience Only</strong>
+                                    </div>
+                                    <div class="scope-details">
+                                        <span class="scope-pillars">🛠️ Focus Area</span>
+                                        <span class="scope-time">9 questions • 5-7 minutes</span>
+                                    </div>
+                                    <p class="scope-description">AI tools for development and deployment</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Personal Information -->
+                    <div class="personal-info-section">
+                        <label class="form-label section-label">Your Information</label>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" required autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" required autocomplete="family-name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required autocomplete="email">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company *</label>
+                                <input type="text" id="company" name="company" class="form-control" required autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="form-label">Role *</label>
+                                <select id="role" name="role" class="form-control" required>
+                                    <option value="">Select your role</option>
+                                    <option value="ceo">CEO/Founder</option>
+                                    <option value="cto">CTO/Technical Leader</option>
+                                    <option value="marketing">Marketing Director/CMO</option>
+                                    <option value="developer">Developer/Engineer</option>
+                                    <option value="designer">Designer/UX</option>
+                                    <option value="content">Content Manager</option>
+                                    <option value="product">Product Manager</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="industry" class="form-label">Industry *</label>
+                            <select id="industry" name="industry" class="form-control" required>
+                                <option value="">Select your industry</option>
+                                <option value="technology">Technology/Software</option>
+                                <option value="ecommerce">E-commerce/Retail</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="financial">Financial Services</option>
+                                <option value="education">Education</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="media">Media/Publishing</option>
+                                <option value="professional">Professional Services</option>
+                                <option value="government">Government/Non-profit</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <small class="form-help">This helps us provide industry-specific benchmarks and recommendations</small>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-full-width">
+                        Get Started
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <div class="quiz-header">
+            <div class="container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="current-question">1</span> of <span id="total-questions">27</span>
+                    </div>
+                </div>
+                
+                <div class="current-pillar" id="current-pillar">
+                    <span class="pillar-badge" id="pillar-badge">Audience Experience</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quiz-content">
+            <div class="container">
+                <div class="question-card">
+                    <div class="question-category" id="question-category">AI-Powered Features</div>
+                    <h2 class="question-text" id="question-text">How does your CMS handle search functionality?</h2>
+                    
+                    <div class="options-container" id="options-container">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="question-navigation">
+                        <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                        <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pillar Transition Screen -->
+    <div id="transition-screen" class="screen">
+        <div class="container">
+            <div class="transition-content">
+                <div class="transition-icon" id="transition-icon">✍️</div>
+                <h2 id="transition-title">Creator Experience</h2>
+                <p id="transition-description">AI tools that improve content creation, workflows, and editorial processes</p>
+                <button id="continue-btn" class="btn btn-primary btn-lg">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+        <div class="container">
+            <div class="results-header">
+                <h1>Your AI Readiness Results</h1>
+                <div class="overall-score">
+                    <div class="score-circle">
+                        <span class="score-number" id="overall-score">0</span>
+                        <span class="score-label">Overall Score</span>
+                    </div>
+                    <div class="maturity-level">
+                        <span class="level-badge" id="maturity-badge">Beginner</span>
+                        <p id="maturity-description">Limited AI integration, foundational gaps</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Industry Benchmark Section -->
+            <div class="industry-benchmark" id="industry-benchmark">
+                <h3>Industry Benchmark</h3>
+                <div class="benchmark-comparison">
+                    <div class="benchmark-item">
+                        <span class="benchmark-label">Your Score</span>
+                        <span class="benchmark-score your-score" id="benchmark-your-score">0%</span>
+                    </div>
+                    <div class="benchmark-item">
+                        <span class="benchmark-label" id="benchmark-industry-label">Industry Average</span>
+                        <span class="benchmark-score industry-score" id="benchmark-industry-score">0%</span>
+                    </div>
+                </div>
+                <div class="benchmark-insight" id="benchmark-insight">
+                    <!-- Benchmark insight will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="pillar-scores" id="pillar-scores">
+                <h3>Pillar Breakdown</h3>
+                <div class="pillars-grid">
+                    <div class="pillar-result audience" id="audience-result">
+                        <div class="pillar-header">
+                            <span class="pillar-icon">👥</span>
+                            <h4>Audience Experience</h4>
+                        </div>
+                        <div class="pillar-score-bar">
+                            <div class="score-bar">
+                                <div class="score-fill audience-fill" id="audience-fill"></div>
+                            </div>
+                            <span class="pillar-score" id="audience-score">0%</span>
+                        </div>
+                        <div class="pillar-benchmark">
+                            <small>Industry avg: <span id="audience-industry-avg">0%</span></small>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-result creator" id="creator-result">
+                        <div class="pillar-header">
+                            <span class="pillar-icon">✍️</span>
+                            <h4>Creator Experience</h4>
+                        </div>
+                        <div class="pillar-score-bar">
+                            <div class="score-bar">
+                                <div class="score-fill creator-fill" id="creator-fill"></div>
+                            </div>
+                            <span class="pillar-score" id="creator-score">0%</span>
+                        </div>
+                        <div class="pillar-benchmark">
+                            <small>Industry avg: <span id="creator-industry-avg">0%</span></small>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar-result developer" id="developer-result">
+                        <div class="pillar-header">
+                            <span class="pillar-icon">🛠️</span>
+                            <h4>Developer Experience</h4>
+                        </div>
+                        <div class="pillar-score-bar">
+                            <div class="score-bar">
+                                <div class="score-fill developer-fill" id="developer-fill"></div>
+                            </div>
+                            <span class="pillar-score" id="developer-score">0%</span>
+                        </div>
+                        <div class="pillar-benchmark">
+                            <small>Industry avg: <span id="developer-industry-avg">0%</span></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendations-section">
+                <h3>Industry-Specific Recommendations</h3>
+                <div id="recommendations-content">
+                    <!-- Recommendations will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="results-actions">
+                <button id="export-btn" class="btn btn-primary">Print Results</button>
+                <button id="retake-btn" class="btn btn-secondary">Start Over</button>
+            </div>
+
+            <div class="results-cta">
+                <a href="https://calendly.com/ndevr/15min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Schedule a 15‑minute strategy call</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Analyzing your responses...</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <img src="https://images.ndevr.io/uploads/2015/07/logo-500.png" alt="Ndevr Logo" class="site-footer__logo">
+            <p class="site-footer__power">Powered by Ndevr</p>
+            <p class="site-footer__copy">© <span id="current-year"></span> Ndevr, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

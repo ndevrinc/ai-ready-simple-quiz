@@ -10,19 +10,19 @@
     <!-- SVG Icon Definitions -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
         <symbol id="icon-audience" viewBox="0 0 24 24">
-            <circle cx="8" cy="8" r="3" fill="currentColor"/>
-            <circle cx="16" cy="8" r="3" fill="currentColor"/>
-            <path d="M2 20c0-3.314 2.686-6 6-6h0c3.314 0 6 2.686 6 6H2z" fill="currentColor"/>
-            <path d="M10 20c0-2.209 1.791-4 4-4h0c2.209 0 4 1.791 4 4h-8z" fill="currentColor"/>
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
         </symbol>
         <symbol id="icon-creator" viewBox="0 0 24 24">
-            <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" fill="currentColor"/>
-            <path d="M20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0L14.13 4.1l3.75 3.75 2.83-2.81z" fill="currentColor"/>
+            <path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" fill="currentColor"/>
         </symbol>
         <symbol id="icon-developer" viewBox="0 0 24 24">
-            <path d="M7.5 8L3 12.5 7.5 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M16.5 8L21 12.5 16.5 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9.5 20l5-16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-check-circle" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-roadmap" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-5H8.41c-.89 0-1.34-1.08-.71-1.71l3.59-3.59c.39-.39 1.02-.39 1.41 0l3.59 3.59c.63.63.18 1.71-.71 1.71H13v5h-2z" fill="currentColor"/>
         </symbol>
     </svg>
     <!-- Welcome Screen -->
@@ -360,7 +360,9 @@
 
     <footer class="site-footer">
         <div class="container">
-            <img src="https://images.ndevr.io/uploads/2015/07/logo-500.png" alt="Ndevr Logo" class="site-footer__logo">
+            <a href="https://www.ndevr.io" target="_blank" rel="noopener">
+                <img src="https://images.ndevr.io/uploads/2015/07/logo-500.png" alt="Ndevr Logo" class="site-footer__logo">
+            </a>
             <p class="site-footer__power">Powered by Ndevr</p>
             <p class="site-footer__copy">© <span id="current-year"></span> Ndevr, Inc. All rights reserved.</p>
         </div>

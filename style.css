@@ -858,29 +858,17 @@ body {
 
 .pillar-card {
   background: var(--ndevr-white);
-  border: 2px solid var(--ndevr-border-gray);
+  border: 1px solid var(--ndevr-border-gray);
   border-radius: var(--radius-lg);
   padding: var(--space-20);
   transition: all var(--duration-normal) var(--ease-standard);
 }
 
-.pillar-card:hover {
-  border-color: var(--ndevr-red);
-  box-shadow: 0 4px 12px rgba(254, 17, 50, 0.1);
-  transform: translateY(-2px);
-}
+.pillar-card:hover { border-color: var(--ndevr-red); transform: translateY(-2px); }
 
-.pillar-card.audience {
-  border-left: 4px solid var(--ndevr-red);
-}
-
-.pillar-card.creator {
-  border-left: 4px solid var(--ndevr-gray);
-}
-
-.pillar-card.developer {
-  border-left: 4px solid var(--ndevr-black);
-}
+.pillar-card.audience,
+.pillar-card.creator,
+.pillar-card.developer { border-left: none; }
 
 .pillar-icon {
   font-size: var(--font-size-4xl);
@@ -906,13 +894,13 @@ body {
 /* Enhanced User Form */
 .user-form {
   background: var(--ndevr-white);
-  border: 2px solid var(--ndevr-border-gray);
+  border: 1px solid var(--ndevr-border-gray);
   border-radius: var(--radius-lg);
   padding: var(--space-32);
   text-align: left;
   max-width: 700px;
   margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .user-form h3 {
@@ -1217,10 +1205,10 @@ select.form-control {
 
 .question-card {
   background: var(--ndevr-white);
-  border: 2px solid var(--ndevr-border-gray);
+  border: 1px solid var(--ndevr-border-gray);
   border-radius: var(--radius-lg);
   padding: var(--space-32);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .question-category {
@@ -1246,7 +1234,7 @@ select.form-control {
 
 .option-item {
   background: var(--ndevr-white);
-  border: 2px solid var(--ndevr-border-gray);
+  border: 1px solid var(--ndevr-border-gray);
   border-radius: var(--radius-base);
   padding: var(--space-16);
   margin-bottom: var(--space-12);
@@ -1259,13 +1247,13 @@ select.form-control {
   border-color: var(--ndevr-red);
   background: rgba(254, 17, 50, 0.02);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(254, 17, 50, 0.1);
+  box-shadow: none;
 }
 
 .option-item.selected {
   border-color: var(--ndevr-red);
   background: rgba(254, 17, 50, 0.05);
-  box-shadow: 0 0 0 1px var(--ndevr-red);
+  box-shadow: none;
 }
 
 .option-text {
@@ -1663,7 +1651,7 @@ select.form-control {
   border-radius: var(--radius-lg);
   padding: var(--space-32);
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   border: 2px solid var(--ndevr-border-gray);
 }
 

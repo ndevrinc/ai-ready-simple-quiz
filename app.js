@@ -611,7 +611,7 @@ class AIReadinessQuiz {
         console.log('🚀 Starting enhanced form submission process');
         
         try {
-            const form = document.getElementById('user-info-form');
+            const form = document.getElementById('ai-ready-quiz-user-form');
             if (!form) {
                 console.error('❌ Form element not found');
                 return;
@@ -682,7 +682,7 @@ class AIReadinessQuiz {
     showFormError(message) {
         this.clearFormError();
         
-        const form = document.getElementById('user-info-form');
+        const form = document.getElementById('ai-ready-quiz-user-form');
         const errorDiv = document.createElement('div');
         errorDiv.className = 'form-error';
         errorDiv.textContent = message;
@@ -699,7 +699,7 @@ class AIReadinessQuiz {
     }
     
     setFormLoading(isLoading) {
-        const submitBtn = document.querySelector('#user-info-form button[type="submit"]');
+        const submitBtn = document.querySelector('#ai-ready-quiz-user-form button[type="submit"]');
         if (submitBtn) {
             submitBtn.disabled = isLoading;
             submitBtn.textContent = isLoading ? 'Starting Quiz...' : 'Get Started';

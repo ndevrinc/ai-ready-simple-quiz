@@ -1090,14 +1090,14 @@ class AIReadinessQuiz {
         }));
         
         // Sort by priority for this industry, then by gap
-        const priorityAreas = userPillarScores
+        const displayAreas = userPillarScores
             .sort((a, b) => {
                 const aPriority = industryData.priorities.indexOf(a.id);
                 const bPriority = industryData.priorities.indexOf(b.id);
                 if (aPriority !== bPriority) return aPriority - bPriority;
                 return b.gap - a.gap; // Larger gaps first
-            })
-            .slice(0, 2);
+            });
+        // Show all selected areas with recommendations
         
         container.innerHTML = `
             <div class="recommendation-category">
@@ -1110,7 +1110,7 @@ class AIReadinessQuiz {
                     </ul>
                 </div>
             </div>
-            ${priorityAreas.map(area => `
+            ${displayAreas.map(area => `
                 <div class="recommendation-category">
                     <h4>${area.name} - Priority Focus (${area.score}% vs ${area.benchmark}% industry avg)</h4>
                     <div class="action-plan">

@@ -538,7 +538,7 @@ class AIReadinessQuiz {
         
         try {
             // User form submission
-            const userForm = document.getElementById('user-info-form');
+            const userForm = document.getElementById('ai-ready-quiz-user-form');
             if (userForm) {
                 console.log('✅ Found user info form, adding submit listener');
                 userForm.addEventListener('submit', (e) => {
